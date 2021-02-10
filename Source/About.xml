@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>[1.1] Star Wars - Droids Core</name>
+  <author>FantasyFan</author>
+  <supportedVersions>
+    <li>1.1</li>
+  </supportedVersions>
+  <packageId>FantasyFan.StarWars.CoreDroid</packageId>
+  <description>
+This mod adds the base fuctions for my droid mods.
+	  </description>
+</ModMetaData>

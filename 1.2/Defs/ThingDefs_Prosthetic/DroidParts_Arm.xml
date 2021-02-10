@@ -1,0 +1,479 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--Computer Scomp Link-->
+  <ThingDef ParentName="BodyPartDroidBase">
+    <defName>SW_Droid_Arm_Computer_Scomp_Link</defName>
+    <label>Droid Arm - Scomp Link</label>
+    <descriptionHyperlinks>
+      <RecipeDef>SW_Install_Arm_Computer_Scomp_Link</RecipeDef>
+    </descriptionHyperlinks>
+    <statBases>
+      <MarketValue>280</MarketValue>
+    </statBases>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallDroidPartArtificialBase">
+    <defName>SW_Install_Arm_Computer_Scomp_Link</defName>
+    <label>install Droid Arm - Scomp Link</label>
+    <descriptionHyperlinks>
+      <ThingDef>SW_Droid_Arm_Computer_Scomp_Link</ThingDef>
+    </descriptionHyperlinks>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SW_Droid_Arm_Computer_Scomp_Link</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SW_Droid_Arm_Computer_Scomp_Link</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>SW_Droid_Arm</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>SW_Droid_Arm_Computer_Scomp_Link</addsHediff>
+  </RecipeDef>
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>SW_Droid_Arm_Computer_Scomp_Link</defName>
+    <label>Droid Arm - Scomp Link</label>
+    <labelNoun>a Droid Arm - Scomp Link</labelNoun>
+    <description>An installed Droid Arm Attachment.</description>
+    <descriptionHyperlinks>
+      <ThingDef>SW_Droid_Arm_Computer_Scomp_Link</ThingDef>
+    </descriptionHyperlinks>
+    <defaultLabelColor>(170, 210, 100)</defaultLabelColor>
+    <comps>
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+          <li>
+            <label>fist</label>
+            <capacities>
+              <li>Blunt</li>
+            </capacities>
+            <power>8.2</power>
+            <cooldownTime>2</cooldownTime>
+            <soundMeleeHit>MeleeHit_BionicPunch</soundMeleeHit>
+            <soundMeleeMiss>MeleeMiss_BionicPunch</soundMeleeMiss>
+          </li>
+        </tools>
+      </li>
+    </comps>
+    <spawnThingOnRemoved>SW_Droid_Arm_Computer_Scomp_Link</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.00</partEfficiency>
+    </addedPartProps>
+  </HediffDef>
+  <!--Repair Arm-->
+  <ThingDef ParentName="BodyPartDroidBase">
+    <defName>SW_Droid_Arm_Repair_Arm</defName>
+    <label>Droid Arm - Repair Attachment</label>
+    <descriptionHyperlinks>
+      <RecipeDef>SW_Install_Arm_Repair_Arm</RecipeDef>
+    </descriptionHyperlinks>
+    <statBases>
+      <MarketValue>280</MarketValue>
+    </statBases>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallDroidPartArtificialBase">
+    <defName>SW_Install_Arm_Repair_Arm</defName>
+    <label>install Droid Arm - Repair Attachment</label>
+    <descriptionHyperlinks>
+      <ThingDef>SW_Droid_Arm_Repair_Arm</ThingDef>
+    </descriptionHyperlinks>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SW_Droid_Arm_Repair_Arm</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SW_Droid_Arm_Repair_Arm</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>SW_Droid_Arm</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>SW_Droid_Arm_Repair_Arm</addsHediff>
+  </RecipeDef>
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>SW_Droid_Arm_Repair_Arm</defName>
+    <label>Droid Arm - Repair Attachment</label>
+    <labelNoun>a Droid Arm - Repair Attachment</labelNoun>
+    <description>An installed Droid Arm Attachment.</description>
+    <descriptionHyperlinks>
+      <ThingDef>SW_Droid_Arm_Repair_Arm</ThingDef>
+    </descriptionHyperlinks>
+    <defaultLabelColor>(170, 210, 100)</defaultLabelColor>
+    <comps>
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+          <li>
+            <label>fist</label>
+            <capacities>
+              <li>Blunt</li>
+            </capacities>
+            <power>8.2</power>
+            <cooldownTime>2</cooldownTime>
+            <soundMeleeHit>MeleeHit_BionicPunch</soundMeleeHit>
+            <soundMeleeMiss>MeleeMiss_BionicPunch</soundMeleeMiss>
+          </li>
+        </tools>
+      </li>
+    </comps>
+    <spawnThingOnRemoved>SW_Droid_Arm_Repair_Arm</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.00</partEfficiency>
+    </addedPartProps>
+  </HediffDef>
+  <!--Charge Arm-->
+  <ThingDef ParentName="BodyPartDroidBase">
+    <defName>SW_Droid_Arm_Charge_Arm</defName>
+    <label>Droid Arm - Charge Attachment</label>
+    <descriptionHyperlinks>
+      <RecipeDef>SW_Install_Arm_Charge_Arm</RecipeDef>
+    </descriptionHyperlinks>
+    <statBases>
+      <MarketValue>280</MarketValue>
+    </statBases>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallDroidPartArtificialBase">
+    <defName>SW_Install_Arm_Charge_Arm</defName>
+    <label>install Droid Arm - Charge Attachment</label>
+    <descriptionHyperlinks>
+      <ThingDef>SW_Droid_Arm_Charge_Arm</ThingDef>
+    </descriptionHyperlinks>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SW_Droid_Arm_Charge_Arm</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SW_Droid_Arm_Charge_Arm</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>SW_Droid_Arm</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>SW_Droid_Arm_Charge_Arm</addsHediff>
+  </RecipeDef>
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>SW_Droid_Arm_Charge_Arm</defName>
+    <label>Droid Arm - Charge Attachment</label>
+    <labelNoun>a Droid Arm - Charge Attachment</labelNoun>
+    <description>An installed Droid Arm Attachment.</description>
+    <descriptionHyperlinks>
+      <ThingDef>SW_Droid_Arm_Charge_Arm</ThingDef>
+    </descriptionHyperlinks>
+    <defaultLabelColor>(170, 210, 100)</defaultLabelColor>
+    <comps>
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+          <li>
+            <label>fist</label>
+            <capacities>
+              <li>Blunt</li>
+            </capacities>
+            <power>8.2</power>
+            <cooldownTime>2</cooldownTime>
+            <soundMeleeHit>MeleeHit_BionicPunch</soundMeleeHit>
+            <soundMeleeMiss>MeleeMiss_BionicPunch</soundMeleeMiss>
+          </li>
+        </tools>
+      </li>
+    </comps>
+    <spawnThingOnRemoved>SW_Droid_Arm_Charge_Arm</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.00</partEfficiency>
+    </addedPartProps>
+  </HediffDef>
+  <!--Electric Arc Welder-->
+  <ThingDef ParentName="BodyPartDroidBase">
+    <defName>SW_Droid_Arm_Electric_Arc_Welder</defName>
+    <label>Droid Arm - Electric Arc Welder</label>
+    <descriptionHyperlinks>
+      <RecipeDef>SW_Install_Arm_Electric_Arc_Welder</RecipeDef>
+    </descriptionHyperlinks>
+    <statBases>
+      <MarketValue>280</MarketValue>
+    </statBases>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallDroidPartArtificialBase">
+    <defName>SW_Install_Arm_Electric_Arc_Welder</defName>
+    <label>install Droid Arm - Electric Arc Welder</label>
+    <descriptionHyperlinks>
+      <ThingDef>SW_Droid_Arm_Electric_Arc_Welder</ThingDef>
+    </descriptionHyperlinks>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SW_Droid_Arm_Electric_Arc_Welder</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SW_Droid_Arm_Electric_Arc_Welder</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>SW_Droid_Arm</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>SW_Droid_Arm_Electric_Arc_Welder</addsHediff>
+  </RecipeDef>
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>SW_Droid_Arm_Electric_Arc_Welder</defName>
+    <label>Droid Arm - Electric Arc Welder</label>
+    <labelNoun>a Droid Arm - Electric Arc Welder</labelNoun>
+    <description>An installed Droid Arm Attachment.</description>
+    <descriptionHyperlinks>
+      <ThingDef>SW_Droid_Arm_Electric_Arc_Welder</ThingDef>
+    </descriptionHyperlinks>
+    <defaultLabelColor>(170, 210, 100)</defaultLabelColor>
+    <comps>
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+          <li>
+            <label>fist</label>
+            <capacities>
+              <li>Blunt</li>
+            </capacities>
+            <power>8.2</power>
+            <cooldownTime>2</cooldownTime>
+            <soundMeleeHit>MeleeHit_BionicPunch</soundMeleeHit>
+            <soundMeleeMiss>MeleeMiss_BionicPunch</soundMeleeMiss>
+          </li>
+        </tools>
+      </li>
+    </comps>
+    <spawnThingOnRemoved>SW_Droid_Arm_Electric_Arc_Welder</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.00</partEfficiency>
+    </addedPartProps>
+  </HediffDef>
+  <!--Circular Saw-->
+  <ThingDef ParentName="BodyPartDroidBase">
+    <defName>SW_Droid_Arm_Circular_Saw</defName>
+    <label>Droid Arm - Circular Saw</label>
+    <descriptionHyperlinks>
+      <RecipeDef>SW_Install_Arm_Circular_Saw</RecipeDef>
+    </descriptionHyperlinks>
+    <statBases>
+      <MarketValue>280</MarketValue>
+    </statBases>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallDroidPartArtificialBase">
+    <defName>SW_Install_Arm_Circular_Saw</defName>
+    <label>install Droid Arm - Circular Saw</label>
+    <descriptionHyperlinks>
+      <ThingDef>SW_Droid_Arm_Circular_Saw</ThingDef>
+    </descriptionHyperlinks>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SW_Droid_Arm_Circular_Saw</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SW_Droid_Arm_Circular_Saw</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>SW_Droid_Arm</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>SW_Droid_Arm_Circular_Saw</addsHediff>
+  </RecipeDef>
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>SW_Droid_Arm_Circular_Saw</defName>
+    <label>Droid Arm - Circular Saw</label>
+    <labelNoun>a Droid Arm - Circular Saw</labelNoun>
+    <description>An installed Droid Arm Attachment.</description>
+    <descriptionHyperlinks>
+      <ThingDef>SW_Droid_Arm_Circular_Saw</ThingDef>
+    </descriptionHyperlinks>
+    <defaultLabelColor>(170, 210, 100)</defaultLabelColor>
+    <comps>
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+          <li>
+            <label>fist</label>
+            <capacities>
+              <li>Blunt</li>
+            </capacities>
+            <power>8.2</power>
+            <cooldownTime>2</cooldownTime>
+            <soundMeleeHit>MeleeHit_BionicPunch</soundMeleeHit>
+            <soundMeleeMiss>MeleeMiss_BionicPunch</soundMeleeMiss>
+          </li>
+        </tools>
+      </li>
+    </comps>
+    <spawnThingOnRemoved>SW_Droid_Arm_Circular_Saw</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.00</partEfficiency>
+    </addedPartProps>
+  </HediffDef>
+  <!--Hypodermic Injector-->
+  <ThingDef ParentName="BodyPartDroidBase">
+    <defName>SW_Droid_Arm_Hypodermic_Injector</defName>
+    <label>Droid Arm - Hypodermic Injector</label>
+    <descriptionHyperlinks>
+      <RecipeDef>SW_Install_Arm_Hypodermic_Injector</RecipeDef>
+    </descriptionHyperlinks>
+    <statBases>
+      <MarketValue>280</MarketValue>
+    </statBases>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallDroidPartArtificialBase">
+    <defName>SW_Install_Arm_Hypodermic_Injector</defName>
+    <label>install Droid Arm - Hypodermic Injector</label>
+    <descriptionHyperlinks>
+      <ThingDef>SW_Droid_Arm_Hypodermic_Injector</ThingDef>
+    </descriptionHyperlinks>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SW_Droid_Arm_Hypodermic_Injector</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SW_Droid_Arm_Hypodermic_Injector</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>SW_Droid_Arm</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>SW_Droid_Arm_Hypodermic_Injector</addsHediff>
+  </RecipeDef>
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>SW_Droid_Arm_Hypodermic_Injector</defName>
+    <label>Droid Arm - Hypodermic Injector</label>
+    <labelNoun>a Droid Arm - Hypodermic Injector</labelNoun>
+    <description>An installed Droid Arm Attachment.</description>
+    <descriptionHyperlinks>
+      <ThingDef>SW_Droid_Arm_Hypodermic_Injector</ThingDef>
+    </descriptionHyperlinks>
+    <defaultLabelColor>(170, 210, 100)</defaultLabelColor>
+    <comps>
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+          <li>
+            <label>fist</label>
+            <capacities>
+              <li>Blunt</li>
+            </capacities>
+            <power>8.2</power>
+            <cooldownTime>2</cooldownTime>
+            <soundMeleeHit>MeleeHit_BionicPunch</soundMeleeHit>
+            <soundMeleeMiss>MeleeMiss_BionicPunch</soundMeleeMiss>
+          </li>
+        </tools>
+      </li>
+    </comps>
+    <spawnThingOnRemoved>SW_Droid_Arm_Hypodermic_Injector</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.00</partEfficiency>
+    </addedPartProps>
+  </HediffDef>
+  <!--Cutting Saw-->
+  <ThingDef ParentName="BodyPartDroidBase">
+    <defName>SW_Droid_Arm_Cutting_Saw</defName>
+    <label>Droid Arm - Cutting Saw</label>
+    <descriptionHyperlinks>
+      <RecipeDef>SW_Install_Arm_Cutting_Saw</RecipeDef>
+    </descriptionHyperlinks>
+    <statBases>
+      <MarketValue>280</MarketValue>
+    </statBases>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallDroidPartArtificialBase">
+    <defName>SW_Install_Arm_Cutting_Saw</defName>
+    <label>install Droid Arm - Cutting Saw</label>
+    <descriptionHyperlinks>
+      <ThingDef>SW_Droid_Arm_Cutting_Saw</ThingDef>
+    </descriptionHyperlinks>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SW_Droid_Arm_Cutting_Saw</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SW_Droid_Arm_Cutting_Saw</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>SW_Droid_Arm</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>SW_Droid_Arm_Cutting_Saw</addsHediff>
+  </RecipeDef>
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>SW_Droid_Arm_Cutting_Saw</defName>
+    <label>Droid Arm - Cutting Saw</label>
+    <labelNoun>a Droid Arm - Cutting Saw</labelNoun>
+    <description>An installed Droid Arm Attachment.</description>
+    <descriptionHyperlinks>
+      <ThingDef>SW_Droid_Arm_Cutting_Saw</ThingDef>
+    </descriptionHyperlinks>
+    <defaultLabelColor>(170, 210, 100)</defaultLabelColor>
+    <comps>
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+          <li>
+            <label>fist</label>
+            <capacities>
+              <li>Blunt</li>
+            </capacities>
+            <power>8.2</power>
+            <cooldownTime>2</cooldownTime>
+            <soundMeleeHit>MeleeHit_BionicPunch</soundMeleeHit>
+            <soundMeleeMiss>MeleeMiss_BionicPunch</soundMeleeMiss>
+          </li>
+        </tools>
+      </li>
+    </comps>
+    <spawnThingOnRemoved>SW_Droid_Arm_Cutting_Saw</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.00</partEfficiency>
+    </addedPartProps>
+  </HediffDef>
+</Defs>

@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingCategoryDef>
+    <defName>AssemblyKits</defName>
+    <label>assembly kits</label>
+    <parent>Manufactured</parent>
+    <iconPath>UI/Icons/ThingCategories/Manufactured</iconPath>
+    <resourceReadoutRoot>true</resourceReadoutRoot>
+  </ThingCategoryDef>
+  <ThingDef ParentName="ResourceBase" Name="SW_AssemblyKit_Base" Abstract="True">
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <stackLimit>1</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <statBases>
+      <MaxHitPoints>70</MaxHitPoints>
+      <Mass>0.6</Mass>
+      <Flammability>0.2</Flammability>
+      <DeteriorationRate>2.0</DeteriorationRate>
+    </statBases>
+    <intricate>true</intricate>
+    <thingCategories>
+      <li>AssemblyKits</li>
+    </thingCategories>
+  </ThingDef>
+  <ThingDef Name="SW_CreateBuilding_Base" Abstract="True">
+    <thingClass>Building</thingClass>
+    <graphicData>
+      <texPath>Things/Alpha</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <WorkToMake>550</WorkToMake>
+      <MaxHitPoints>150</MaxHitPoints>
+      <Flammability>0.1</Flammability>
+    </statBases>
+    <size>(1,1)</size>
+    <category>Building</category>
+    <pathCost>200</pathCost>
+    <passability>Standable</passability>
+    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <filthLeaving>Filth_RubbleRock</filthLeaving>
+    <hasInteractionCell>false</hasInteractionCell>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <altitudeLayer>Building</altitudeLayer>
+    <repairEffect>Repair</repairEffect>
+    <useHitPoints>True</useHitPoints>
+    <selectable>true</selectable>
+    <surfaceType>Item</surfaceType>
+    <tickerType>Normal</tickerType>
+  </ThingDef>
+</Defs>
