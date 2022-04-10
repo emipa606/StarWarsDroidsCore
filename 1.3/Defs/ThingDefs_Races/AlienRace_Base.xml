@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <AlienRace.ThingDef_AlienRace ParentName="BasePawn" Name="SW_Droid_Base" Abstract="True">
+    <!-- <comps> -->
+    <!-- <li Class="O21Toolbox.Needs.CompProperties_EnergyTracker"> -->
+    <!-- <canHibernate>true</canHibernate> -->
+    <!-- <hibernationJob>O21Hibernate</hibernationJob> -->
+    <!-- </li> -->
+    <!-- </comps> -->
+    <alienRace>
+      <generalSettings>
+        <maleGenderProbability>1.0</maleGenderProbability>
+        <humanRecipeImport>false</humanRecipeImport>
+        <allowHumanBios>false</allowHumanBios>
+        <immuneToAge>true</immuneToAge>
+        <disallowedTraits>
+          <li>
+            <defName>DrugDesire</defName>
+          </li>
+          <li>
+            <defName>NaturalMood</defName>
+          </li>
+          <li>
+            <defName>Nerves</defName>
+          </li>
+          <li>
+            <defName>Neurotic</defName>
+          </li>
+          <li>
+            <defName>PsychicSensitivity</defName>
+          </li>
+          <li>
+            <defName>Cannibal</defName>
+          </li>
+          <li>
+            <defName>TooSmart</defName>
+          </li>
+          <li>
+            <defName>BodyPurist</defName>
+          </li>
+          <li>
+            <defName>Greedy</defName>
+          </li>
+          <li>
+            <defName>Jealous</defName>
+          </li>
+          <li>
+            <defName>DislikesMen</defName>
+          </li>
+          <li>
+            <defName>DislikesWomen</defName>
+          </li>
+          <li>
+            <defName>Xenophobia</defName>
+          </li>
+          <li>
+            <defName>CreepyBreathing</defName>
+          </li>
+          <li>
+            <defName>Pyromaniac</defName>
+          </li>
+          <li>
+            <defName>Wimp</defName>
+          </li>
+        </disallowedTraits>
+        <chemicalSettings>
+          <li>
+            <chemical>Smokeleaf</chemical>
+            <ingestible>false</ingestible>
+          </li>
+          <li>
+            <chemical>Luciferium</chemical>
+            <ingestible>false</ingestible>
+          </li>
+          <!-- <li> -->
+          <!-- <chemical>Flake</chemical> -->
+          <!-- <ingestible>false</ingestible> -->
+          <!-- </li> -->
+          <li>
+            <chemical>Ambrosia</chemical>
+            <ingestible>false</ingestible>
+          </li>
+          <li>
+            <chemical>GoJuice</chemical>
+            <ingestible>false</ingestible>
+          </li>
+          <!-- <li> -->
+          <!-- <chemical>Yayo</chemical> -->
+          <!-- <ingestible>false</ingestible> -->
+          <!-- </li> -->
+          <li>
+            <chemical>Psychite</chemical>
+            <ingestible>false</ingestible>
+          </li>
+          <li>
+            <chemical>WakeUp</chemical>
+            <ingestible>false</ingestible>
+          </li>
+        </chemicalSettings>
+      </generalSettings>
+      <styleSettings>
+        <li>
+          <key>HairDef</key>
+          <value>
+            <hasStyle>false</hasStyle>
+          </value>
+        </li>
+        <li>
+          <key>BeardDef</key>
+          <value>
+            <hasStyle>false</hasStyle>
+          </value>
+        </li>
+        <li>
+          <key>TattooDef</key>
+          <value>
+            <hasStyle>false</hasStyle>
+          </value>
+        </li>
+      </styleSettings>
+      <relationSettings>
+        <relationChanceModifierLover>0</relationChanceModifierLover>
+        <relationChanceModifierExLover>0</relationChanceModifierExLover>
+        <relationChanceModifierFiance>0</relationChanceModifierFiance>
+        <relationChanceModifierSpouse>0</relationChanceModifierSpouse>
+        <relationChanceModifierExSpouse>0</relationChanceModifierExSpouse>
+        <relationChanceModifierParent>0</relationChanceModifierParent>
+        <relationChanceModifierChild>0</relationChanceModifierChild>
+        <relationChanceModifierSibling>0</relationChanceModifierSibling>
+      </relationSettings>
+      <raceRestriction>
+        <onlyUseRaceRestrictedApparel>true</onlyUseRaceRestrictedApparel>
+        <onlyUseRaceRestrictedWeapons>false</onlyUseRaceRestrictedWeapons>
+      </raceRestriction>
+      <thoughtSettings>
+        <cannotReceiveThoughtsAtAll>true</cannotReceiveThoughtsAtAll>
+        <!-- <cannotReceiveThoughts> -->
+        <!-- <li>NeedFood</li> -->
+        <!-- <li>Naked</li> -->
+        <!-- <li>SharedBed</li> -->
+        <!-- <li>AttendedWedding</li> -->
+        <!-- <li>AttendedParty</li> -->
+        <!-- <li>SleepDisturbed</li> -->
+        <!-- <li>SleptOnGround</li> -->
+        <!-- <li>KnowPrisonerSold</li> -->
+        <!-- <li>KnowGuestOrganHarvested</li> -->
+        <!-- <li>KnowColonistOrganHarvested</li> -->
+        <!-- <li>WasImprisoned</li> -->
+        <!-- <li>KnowBuriedInSarcophagus</li> -->
+        <!-- <li>ButcheredHumanlikeCorpse</li> -->
+        <!-- <li>KnowButcheredHumanlikeCorpse</li> -->
+        <!-- <li>ObservedLayingCorpse</li> -->
+        <!-- <li>ObservedLayingRottingCorpse</li> -->
+        <!-- <li>WitnessedDeathAlly</li> -->
+        <!-- <li>WitnessedDeathNonAlly</li> -->
+        <!-- <li>ColonistBanished</li> -->
+        <!-- <li>ColonistBanishedToDie</li> -->
+        <!-- <li>PrisonerBanishedToDie</li> -->
+        <!-- <li>BondedAnimalBanished</li> -->
+        <!-- <li>SleptInBedroom</li> -->
+        <!-- <li>SleptInBarracks</li> -->
+        <!-- <li>InsultedMood</li> -->
+        <!-- <li>KindWordsMood</li> -->
+        <!-- <li>ArtifactMoodBoost</li> -->
+        <!-- <li>Expectations</li> -->
+        <!-- <li>EnvironmentDark</li> -->
+        <!-- <li>NeedOutdoors</li> -->
+        <!-- <li>ApparelDamaged</li> -->
+        <!-- <li>DeadMansApparel</li> -->
+        <!-- <li>HumanLeatherApparelSad</li> -->
+        <!-- <li>KnowGuestExecuted</li> -->
+        <!-- <li>KnowColonistExecuted</li> -->
+        <!-- <li>KnowPrisonerDiedInnocent</li> -->
+        <!-- <li>KnowColonistDied</li> -->
+        <!-- <li>PawnWithGoodOpinionDied</li> -->
+        <!-- </cannotReceiveThoughts> -->
+      </thoughtSettings>
+    </alienRace>
+    <race>
+      <thinkTreeMain>Humanlike</thinkTreeMain>
+      <thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+      <intelligence>Humanlike</intelligence>
+      <makesFootprints>false</makesFootprints>
+      <lifeExpectancy>2500</lifeExpectancy>
+      <bloodDef>FilthDroidCoolant</bloodDef>
+      <gestationPeriodDays>1</gestationPeriodDays>
+      <soundMeleeHitPawn>Pawn_Melee_MechanoidSlash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_MechanoidSlash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_MechanoidSlash_Miss</soundMeleeMiss>
+      <needsRest>false</needsRest>
+      <baseHungerRate>-100</baseHungerRate>
+      <foodType>None</foodType>
+      <canBePredatorPrey>false</canBePredatorPrey>
+      <fleshType>DroidFlesh</fleshType>
+      <litterSizeCurve>
+        <points>
+          <li>(0.5, 0)</li>
+          <li>(1, 1)</li>
+          <li>(1.01, 0.02)</li>
+          <li>(3.5, 0)</li>
+        </points>
+      </litterSizeCurve>
+      <lifeStageAges>
+        <li>
+          <def>HumanlikeAdult</def>
+          <minAge>0</minAge>
+          <soundWounded>Pawn_Mech_Scyther_Wounded</soundWounded>
+          <soundDeath>Pawn_Mech_Scyther_Death</soundDeath>
+          <soundCall>Pawn_Mech_Scyther_Call</soundCall>
+          <soundAngry>Pawn_Mech_Scyther_Call</soundAngry>
+        </li>
+      </lifeStageAges>
+      <specialShadowData>
+        <volume>(0.3, 0.8, 0.4)</volume>
+        <offset>(0,0,-0.3)</offset>
+      </specialShadowData>
+      <ageGenerationCurve>
+        <points>
+          <li>(1,0)</li>
+          <li>(40,20)</li>
+          <li>(100,100)</li>
+          <li>(140,20)</li>
+          <li>(160,0)</li>
+        </points>
+      </ageGenerationCurve>
+    </race>
+    <recipes>
+      <li>Astromech_ShutDownDroid</li>
+      <li>Astromech_DroidRepairKit</li>
+    </recipes>
+    <modExtensions>
+      <!-- <li Class="O21Toolbox.Needs.EnergyHediffs"> -->
+      <!-- <coolantLoss>O21_CoolantLoss</coolantLoss> -->
+      <!-- <powerShortage>O21_EnergyShortage</powerShortage> -->
+      <!-- <powerFailure>O21_EnergyFailure</powerFailure> -->
+      <!-- </li> -->
+      <!-- <li Class="O21Toolbox.Needs.ArtificialPawnProperties"> -->
+      <!-- <noSkillLoss>true</noSkillLoss> -->
+      <!-- <canSocialize>true</canSocialize> -->
+      <!-- <colonyCaresIfDead>false</colonyCaresIfDead> -->
+      <!-- <repairParts> -->
+      <!-- <li>AstromechParts</li> -->
+      <!-- </repairParts> -->
+      <!-- </li> -->
+      <li Class="O21Toolbox.HarmonyPatches.DefModExt_SpaceCapable" />
+    </modExtensions>
+  </AlienRace.ThingDef_AlienRace>
+</Defs>
