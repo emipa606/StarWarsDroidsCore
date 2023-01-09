@@ -1,0 +1,1464 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--Base-->
+  <ThingDef Name="BodyPartDroidBase" Abstract="True">
+    <description>A droid bodypart.</description>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <useHitPoints>true</useHitPoints>
+    <selectable>true</selectable>
+    <altitudeLayer>Item</altitudeLayer>
+    <tickerType>Never</tickerType>
+    <alwaysHaulable>true</alwaysHaulable>
+    <isTechHediff>true</isTechHediff>
+    <pathCost>10</pathCost>
+    <tradeTags>
+      <li>DroidParts</li>
+    </tradeTags>
+    <comps>
+      <li Class="CompProperties_Forbiddable" />
+    </comps>
+    <techLevel>Spacer</techLevel>
+    <thingCategories>
+      <li>SW_Droid_BodyParts</li>
+    </thingCategories>
+    <graphicData>
+      <texPath>Things/Item/Health/HealthItem</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+      <color>(100,100,100)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>200</MarketValue>
+      <Mass>2</Mass>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Flammability>0.7</Flammability>
+      <Beauty>-4</Beauty>
+      <DeteriorationRate>2.0</DeteriorationRate>
+    </statBases>
+  </ThingDef>
+  <ThingCategoryDef>
+    <defName>SW_Droid_BodyParts</defName>
+    <label>droid parts</label>
+    <parent>BodyParts</parent>
+  </ThingCategoryDef>
+  <RecipeDef Name="SurgeryInstallDroidPartBase" Abstract="True">
+    <effectWorking>ButcherMechanoid</effectWorking>
+    <soundWorking>Recipe_ButcherCorpseMechanoid</soundWorking>
+    <workSpeedStat>ButcheryMechanoidSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <workSkillLearnFactor>16</workSkillLearnFactor>
+    <workerClass>Recipe_InstallImplant</workerClass>
+    <workAmount>2500</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentIndustrial</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ComponentIndustrial</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef Name="SurgeryInstallDroidPartArtificialBase" ParentName="SurgeryInstallDroidPartBase" Abstract="True">
+    <description>Install a droid bodypart.</description>
+    <jobString>Installing droid part.</jobString>
+    <skillRequirements>
+      <Crafting>4</Crafting>
+    </skillRequirements>
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+  </RecipeDef>
+  <RecipeDef Name="SurgeryInstallDroidPartNaturalBase" ParentName="SurgeryInstallDroidPartBase" Abstract="True">
+    <description>Install a droid bodypart.</description>
+    <jobString>Installing droid part.</jobString>
+    <skillRequirements>
+      <Crafting>4</Crafting>
+    </skillRequirements>
+    <workerClass>Recipe_InstallNaturalBodyPart</workerClass>
+  </RecipeDef>
+  <!--====Natural====-->
+  <!--Talking-->
+  <ThingDef ParentName="BodyPartDroidBase">
+    <defName>SW_Droid_Vocabulator</defName>
+    <label>Vocabulator</label>
+    <descriptionHyperlinks>
+      <RecipeDef>SW_Install_Vocabulator</RecipeDef>
+    </descriptionHyperlinks>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallDroidPartNaturalBase">
+    <defName>SW_Install_Vocabulator</defName>
+    <label>install Vocabulator</label>
+    <descriptionHyperlinks>
+      <ThingDef>SW_Droid_Vocabulator</ThingDef>
+    </descriptionHyperlinks>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SW_Droid_Vocabulator</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SW_Droid_Vocabulator</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>SW_Droid_Vocabulator</li>
+    </appliedOnFixedBodyParts>
+  </RecipeDef>
+  <ThingDef ParentName="BodyPartDroidBase">
+    <defName>SW_Droid_Loudspeaker</defName>
+    <label>Loudspeaker</label>
+    <descriptionHyperlinks>
+      <RecipeDef>SW_Install_Loudspeaker</RecipeDef>
+    </descriptionHyperlinks>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallDroidPartNaturalBase">
+    <defName>SW_Install_Loudspeaker</defName>
+    <label>install Loudspeaker</label>
+    <descriptionHyperlinks>
+      <ThingDef>SW_Droid_Loudspeaker</ThingDef>
+    </descriptionHyperlinks>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SW_Droid_Loudspeaker</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SW_Droid_Loudspeaker</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>SW_Droid_Loudspeaker</li>
+    </appliedOnFixedBodyParts>
+  </RecipeDef>
+  <ThingDef ParentName="BodyPartDroidBase">
+    <defName>SW_Droid_Acoustic_Signaler</defName>
+    <label>Acoustic Signaler</label>
+    <descriptionHyperlinks>
+      <RecipeDef>SW_Install_Acoustic_Signaler</RecipeDef>
+    </descriptionHyperlinks>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallDroidPartNaturalBase">
+    <defName>SW_Install_Acoustic_Signaler</defName>
+    <label>install Acoustic Signaler</label>
+    <descriptionHyperlinks>
+      <ThingDef>SW_Droid_Acoustic_Signaler</ThingDef>
+    </descriptionHyperlinks>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SW_Droid_Acoustic_Signaler</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SW_Droid_Acoustic_Signaler</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>SW_Droid_Acoustic_Signaler</li>
+    </appliedOnFixedBodyParts>
+  </RecipeDef>
+  <ThingDef ParentName="BodyPartDroidBase">
+    <defName>SW_Droid_Broadcast_Antennae</defName>
+    <label>Broadcast Antennae</label>
+    <descriptionHyperlinks>
+      <RecipeDef>SW_Install_Broadcast_Antennae</RecipeDef>
+    </descriptionHyperlinks>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallDroidPartNaturalBase">
+    <defName>SW_Install_Broadcast_Antennae</defName>
+    <label>install Broadcast Antennae</label>
+    <descriptionHyperlinks>
+      <ThingDef>SW_Droid_Broadcast_Antennae</ThingDef>
+    </descriptionHyperlinks>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SW_Droid_Broadcast_Antennae</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SW_Droid_Broadcast_Antennae</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>SW_Droid_Broadcast_Antennae</li>
+    </appliedOnFixedBodyParts>
+  </RecipeDef>
+  <!--Hearing-->
+  <ThingDef ParentName="BodyPartDroidBase">
+    <defName>SW_Droid_Auditory_Sensor</defName>
+    <label>Auditory Sensor</label>
+    <descriptionHyperlinks>
+      <RecipeDef>SW_Install_Auditory_Sensor</RecipeDef>
+    </descriptionHyperlinks>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallDroidPartNaturalBase">
+    <defName>SW_Install_Auditory_Sensor</defName>
+    <label>install Auditory Sensor</label>
+    <descriptionHyperlinks>
+      <ThingDef>SW_Droid_Auditory_Sensor</ThingDef>
+    </descriptionHyperlinks>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SW_Droid_Auditory_Sensor</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SW_Droid_Auditory_Sensor</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>SW_Droid_Auditory_Sensor</li>
+      <li>SW_Droid_R5_Auditory_Sensor</li>
+    </appliedOnFixedBodyParts>
+  </RecipeDef>
+  <ThingDef ParentName="BodyPartDroidBase">
+    <defName>SW_Droid_Auditory_Receptors</defName>
+    <label>Auditory Receptors</label>
+    <descriptionHyperlinks>
+      <RecipeDef>SW_Install_Auditory_Receptors</RecipeDef>
+    </descriptionHyperlinks>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallDroidPartNaturalBase">
+    <defName>SW_Install_Auditory_Receptors</defName>
+    <label>install Auditory Receptors</label>
+    <descriptionHyperlinks>
+      <ThingDef>SW_Droid_Auditory_Receptors</ThingDef>
+    </descriptionHyperlinks>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SW_Droid_Auditory_Receptors</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SW_Droid_Auditory_Receptors</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>SW_Droid_Auditory_Receptors</li>
+    </appliedOnFixedBodyParts>
+  </RecipeDef>
+  <!--Sight-->
+  <ThingDef ParentName="BodyPartDroidBase">
+    <defName>SW_Droid_Photoreceptors</defName>
+    <label>Photoreceptors</label>
+    <descriptionHyperlinks>
+      <RecipeDef>SW_Install_Photoreceptors</RecipeDef>
+    </descriptionHyperlinks>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallDroidPartNaturalBase">
+    <defName>SW_Install_Photoreceptors</defName>
+    <label>install Photoreceptors</label>
+    <descriptionHyperlinks>
+      <ThingDef>SW_Droid_Photoreceptors</ThingDef>
+    </descriptionHyperlinks>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SW_Droid_Photoreceptors</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SW_Droid_Photoreceptors</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>SW_Droid_Photoreceptors</li>
+    </appliedOnFixedBodyParts>
+  </RecipeDef>
+  <ThingDef ParentName="BodyPartDroidBase">
+    <defName>SW_Droid_Sensor_Unit</defName>
+    <label>Sensor Unit</label>
+    <descriptionHyperlinks>
+      <RecipeDef>SW_Install_Sensor_Unit</RecipeDef>
+    </descriptionHyperlinks>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallDroidPartNaturalBase">
+    <defName>SW_Install_Sensor_Unit</defName>
+    <label>install Sensor Unit</label>
+    <descriptionHyperlinks>
+      <ThingDef>SW_Droid_Sensor_Unit</ThingDef>
+    </descriptionHyperlinks>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SW_Droid_Sensor_Unit</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SW_Droid_Sensor_Unit</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>SW_Droid_Sensor_Unit</li>
+    </appliedOnFixedBodyParts>
+  </RecipeDef>
+  <ThingDef ParentName="BodyPartDroidBase">
+    <defName>SW_Droid_Radar_Eye</defName>
+    <label>Radar Eye</label>
+    <descriptionHyperlinks>
+      <RecipeDef>SW_Install_Radar_Eye</RecipeDef>
+    </descriptionHyperlinks>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallDroidPartNaturalBase">
+    <defName>SW_Install_Radar_Eye</defName>
+    <label>install Radar Eye</label>
+    <descriptionHyperlinks>
+      <ThingDef>SW_Droid_Radar_Eye</ThingDef>
+    </descriptionHyperlinks>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SW_Droid_Radar_Eye</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SW_Droid_Radar_Eye</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>SW_Droid_Radar_Eye</li>
+      <li>SW_Droid_R5_Radar_Eye</li>
+    </appliedOnFixedBodyParts>
+  </RecipeDef>
+  <ThingDef ParentName="BodyPartDroidBase">
+    <defName>SW_Droid_VicksVisc_Holographic_RecorderProjector</defName>
+    <label>VicksVisc Holographic Recorder/Projector</label>
+    <descriptionHyperlinks>
+      <RecipeDef>SW_Install_VicksVisc_Holographic_RecorderProjector</RecipeDef>
+    </descriptionHyperlinks>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallDroidPartNaturalBase">
+    <defName>SW_Install_VicksVisc_Holographic_RecorderProjector</defName>
+    <label>install VicksVisc Holographic Recorder/Projector</label>
+    <descriptionHyperlinks>
+      <ThingDef>SW_Droid_VicksVisc_Holographic_RecorderProjector</ThingDef>
+    </descriptionHyperlinks>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SW_Droid_VicksVisc_Holographic_RecorderProjector</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SW_Droid_VicksVisc_Holographic_RecorderProjector</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>SW_Droid_VicksVisc_Holographic_RecorderProjector</li>
+    </appliedOnFixedBodyParts>
+  </RecipeDef>
+  <ThingDef ParentName="BodyPartDroidBase">
+    <defName>SW_Droid_Infrared_Receptor</defName>
+    <label>Infrared Receptor</label>
+    <descriptionHyperlinks>
+      <RecipeDef>SW_Install_Infrared_Receptor</RecipeDef>
+    </descriptionHyperlinks>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallDroidPartNaturalBase">
+    <defName>SW_Install_Infrared_Receptor</defName>
+    <label>install Infrared Receptor</label>
+    <descriptionHyperlinks>
+      <ThingDef>SW_Droid_Infrared_Receptor</ThingDef>
+    </descriptionHyperlinks>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SW_Droid_Infrared_Receptor</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SW_Droid_Infrared_Receptor</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>SW_Droid_Infrared_Receptor</li>
+      <li>SW_Droid_R5_Infrared_Receptor</li>
+    </appliedOnFixedBodyParts>
+  </RecipeDef>
+  <ThingDef ParentName="BodyPartDroidBase">
+    <defName>SW_Droid_Medical_Diagnostic_Sensors</defName>
+    <label>Medical Diagnostic Sensors</label>
+    <descriptionHyperlinks>
+      <RecipeDef>SW_Install_Medical_Diagnostic_Sensors</RecipeDef>
+    </descriptionHyperlinks>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallDroidPartNaturalBase">
+    <defName>SW_Install_Medical_Diagnostic_Sensors</defName>
+    <label>install Medical Diagnostic Sensors</label>
+    <descriptionHyperlinks>
+      <ThingDef>SW_Droid_Medical_Diagnostic_Sensors</ThingDef>
+    </descriptionHyperlinks>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SW_Droid_Medical_Diagnostic_Sensors</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SW_Droid_Medical_Diagnostic_Sensors</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>SW_Droid_Medical_Diagnostic_Sensors</li>
+    </appliedOnFixedBodyParts>
+  </RecipeDef>
+  <ThingDef ParentName="BodyPartDroidBase">
+    <defName>SW_Droid_Atmospheric_Sampler</defName>
+    <label>Atmospheric Sampler</label>
+    <descriptionHyperlinks>
+      <RecipeDef>SW_Install_Atmospheric_Sampler</RecipeDef>
+    </descriptionHyperlinks>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallDroidPartNaturalBase">
+    <defName>SW_Install_Atmospheric_Sampler</defName>
+    <label>install Atmospheric Sampler</label>
+    <descriptionHyperlinks>
+      <ThingDef>SW_Droid_Atmospheric_Sampler</ThingDef>
+    </descriptionHyperlinks>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SW_Droid_Atmospheric_Sampler</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SW_Droid_Atmospheric_Sampler</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>SW_Droid_Atmospheric_Sampler</li>
+    </appliedOnFixedBodyParts>
+  </RecipeDef>
+  <ThingDef ParentName="BodyPartDroidBase">
+    <defName>SW_Droid_Planetary_Sensor</defName>
+    <label>Planetary Sensor</label>
+    <descriptionHyperlinks>
+      <RecipeDef>SW_Install_Planetary_Sensor</RecipeDef>
+    </descriptionHyperlinks>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallDroidPartNaturalBase">
+    <defName>SW_Install_Planetary_Sensor</defName>
+    <label>install Planetary Sensor</label>
+    <descriptionHyperlinks>
+      <ThingDef>SW_Droid_Planetary_Sensor</ThingDef>
+    </descriptionHyperlinks>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SW_Droid_Planetary_Sensor</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SW_Droid_Planetary_Sensor</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>SW_Droid_Planetary_Sensor</li>
+    </appliedOnFixedBodyParts>
+  </RecipeDef>
+  <ThingDef ParentName="BodyPartDroidBase">
+    <defName>SW_Droid_Movement_Sensor</defName>
+    <label>Movement Sensor</label>
+    <descriptionHyperlinks>
+      <RecipeDef>SW_Install_Movement_Sensor</RecipeDef>
+    </descriptionHyperlinks>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallDroidPartNaturalBase">
+    <defName>SW_Install_Movement_Sensor</defName>
+    <label>install Movement Sensor</label>
+    <descriptionHyperlinks>
+      <ThingDef>SW_Droid_Movement_Sensor</ThingDef>
+    </descriptionHyperlinks>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SW_Droid_Movement_Sensor</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SW_Droid_Movement_Sensor</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>SW_Droid_Movement_Sensor</li>
+    </appliedOnFixedBodyParts>
+  </RecipeDef>
+  <!--Consciousness-->
+  <ThingDef ParentName="BodyPartDroidBase">
+    <defName>SW_Droid_IntellexIV</defName>
+    <label>Intellex IV</label>
+    <descriptionHyperlinks>
+      <RecipeDef>SW_Install_IntellexIV</RecipeDef>
+    </descriptionHyperlinks>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallDroidPartNaturalBase">
+    <defName>SW_Install_IntellexIV</defName>
+    <label>install Intellex IV</label>
+    <descriptionHyperlinks>
+      <ThingDef>SW_Droid_IntellexIV</ThingDef>
+    </descriptionHyperlinks>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SW_Droid_IntellexIV</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SW_Droid_IntellexIV</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>SW_Droid_IntellexIV</li>
+    </appliedOnFixedBodyParts>
+  </RecipeDef>
+  <ThingDef ParentName="BodyPartDroidBase">
+    <defName>SW_Droid_Medical_Diagnostic_Computer</defName>
+    <label>Medical Diagnostic Computer</label>
+    <descriptionHyperlinks>
+      <RecipeDef>SW_Install_Medical_Diagnostic_Computer</RecipeDef>
+    </descriptionHyperlinks>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallDroidPartNaturalBase">
+    <defName>SW_Install_Medical_Diagnostic_Computer</defName>
+    <label>install Medical Diagnostic Computer</label>
+    <descriptionHyperlinks>
+      <ThingDef>SW_Droid_Medical_Diagnostic_Computer</ThingDef>
+    </descriptionHyperlinks>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SW_Droid_Medical_Diagnostic_Computer</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SW_Droid_Medical_Diagnostic_Computer</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>SW_Droid_Medical_Diagnostic_Computer</li>
+    </appliedOnFixedBodyParts>
+  </RecipeDef>
+  <ThingDef ParentName="BodyPartDroidBase">
+    <defName>SW_Droid_Analytical_Computer</defName>
+    <label>Analytical Computer</label>
+    <descriptionHyperlinks>
+      <RecipeDef>SW_Install_Analytical_Computer</RecipeDef>
+    </descriptionHyperlinks>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallDroidPartNaturalBase">
+    <defName>SW_Install_Analytical_Computer</defName>
+    <label>install Analytical Computer</label>
+    <descriptionHyperlinks>
+      <ThingDef>SW_Droid_Analytical_Computer</ThingDef>
+    </descriptionHyperlinks>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SW_Droid_Analytical_Computer</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SW_Droid_Analytical_Computer</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>SW_Droid_Analytical_Computer</li>
+    </appliedOnFixedBodyParts>
+  </RecipeDef>
+  <ThingDef ParentName="BodyPartDroidBase">
+    <defName>SW_Droid_Analysis_Processors</defName>
+    <label>Analysis Processors</label>
+    <descriptionHyperlinks>
+      <RecipeDef>SW_Install_Analysis_Processors</RecipeDef>
+    </descriptionHyperlinks>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallDroidPartNaturalBase">
+    <defName>SW_Install_Analysis_Processors</defName>
+    <label>install Analysis Processors</label>
+    <descriptionHyperlinks>
+      <ThingDef>SW_Droid_Analysis_Processors</ThingDef>
+    </descriptionHyperlinks>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SW_Droid_Analysis_Processors</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SW_Droid_Analysis_Processors</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>SW_Droid_Analysis_Processors</li>
+    </appliedOnFixedBodyParts>
+  </RecipeDef>
+  <ThingDef ParentName="BodyPartDroidBase">
+    <defName>SW_Droid_Armored_Systems_Housig</defName>
+    <label>Armored Systems Housig</label>
+    <descriptionHyperlinks>
+      <RecipeDef>SW_Install_Armored_Systems_Housig</RecipeDef>
+    </descriptionHyperlinks>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallDroidPartNaturalBase">
+    <defName>SW_Install_Armored_Systems_Housig</defName>
+    <label>install Armored Systems Housig</label>
+    <descriptionHyperlinks>
+      <ThingDef>SW_Droid_Armored_Systems_Housig</ThingDef>
+    </descriptionHyperlinks>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SW_Droid_Armored_Systems_Housig</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SW_Droid_Armored_Systems_Housig</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>SW_Droid_Armored_Systems_Housig</li>
+    </appliedOnFixedBodyParts>
+  </RecipeDef>
+  <ThingDef ParentName="BodyPartDroidBase">
+    <defName>SW_Droid_Skill_Matrix</defName>
+    <label>Skill Matrix</label>
+    <descriptionHyperlinks>
+      <RecipeDef>SW_Install_Skill_Matrix</RecipeDef>
+    </descriptionHyperlinks>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallDroidPartNaturalBase">
+    <defName>SW_Install_Skill_Matrix</defName>
+    <label>install Skill Matrix</label>
+    <descriptionHyperlinks>
+      <ThingDef>SW_Droid_Skill_Matrix</ThingDef>
+    </descriptionHyperlinks>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SW_Droid_Skill_Matrix</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SW_Droid_Skill_Matrix</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>SW_Droid_Skill_Matrix</li>
+    </appliedOnFixedBodyParts>
+  </RecipeDef>
+  <!--Extra-->
+  <ThingDef ParentName="BodyPartDroidBase">
+    <defName>SW_Droid_Olfactory_Sensor</defName>
+    <label>Olfactory Sensor</label>
+    <descriptionHyperlinks>
+      <RecipeDef>SW_Install_Olfactory_Sensor</RecipeDef>
+    </descriptionHyperlinks>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallDroidPartNaturalBase">
+    <defName>SW_Install_Olfactory_Sensor</defName>
+    <label>install Olfactory Sensor</label>
+    <descriptionHyperlinks>
+      <ThingDef>SW_Droid_Olfactory_Sensor</ThingDef>
+    </descriptionHyperlinks>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SW_Droid_Olfactory_Sensor</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SW_Droid_Olfactory_Sensor</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>SW_Droid_Olfactory_Sensor</li>
+    </appliedOnFixedBodyParts>
+  </RecipeDef>
+  <ThingDef ParentName="BodyPartDroidBase">
+    <defName>SW_Droid_Translator_Unit</defName>
+    <label>Translator Unit</label>
+    <descriptionHyperlinks>
+      <RecipeDef>SW_Install_Translator_Unit</RecipeDef>
+    </descriptionHyperlinks>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallDroidPartNaturalBase">
+    <defName>SW_Install_Translator_Unit</defName>
+    <label>install Translator Unit</label>
+    <descriptionHyperlinks>
+      <ThingDef>SW_Droid_Translator_Unit</ThingDef>
+    </descriptionHyperlinks>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SW_Droid_Translator_Unit</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SW_Droid_Translator_Unit</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>SW_Droid_Translator_Unit</li>
+    </appliedOnFixedBodyParts>
+  </RecipeDef>
+  <ThingDef ParentName="BodyPartDroidBase">
+    <defName>SW_Droid_Recording_Unit</defName>
+    <label>Recording Unit</label>
+    <descriptionHyperlinks>
+      <RecipeDef>SW_Install_Recording_Unit</RecipeDef>
+    </descriptionHyperlinks>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallDroidPartNaturalBase">
+    <defName>SW_Install_Recording_Unit</defName>
+    <label>install Recording Unit</label>
+    <descriptionHyperlinks>
+      <ThingDef>SW_Droid_Recording_Unit</ThingDef>
+    </descriptionHyperlinks>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SW_Droid_Recording_Unit</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SW_Droid_Recording_Unit</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>SW_Droid_Recording_Unit</li>
+    </appliedOnFixedBodyParts>
+  </RecipeDef>
+  <ThingDef ParentName="BodyPartDroidBase">
+    <defName>SW_Droid_TranLangII_Communications_Module</defName>
+    <label>TranLang II Communications Module</label>
+    <descriptionHyperlinks>
+      <RecipeDef>SW_Install_TranLangII_Communications_Module</RecipeDef>
+    </descriptionHyperlinks>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallDroidPartNaturalBase">
+    <defName>SW_Install_TranLangII_Communications_Module</defName>
+    <label>install TranLang II Communications Module</label>
+    <descriptionHyperlinks>
+      <ThingDef>SW_Droid_TranLangII_Communications_Module</ThingDef>
+    </descriptionHyperlinks>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SW_Droid_TranLangII_Communications_Module</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SW_Droid_TranLangII_Communications_Module</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>SW_Droid_TranLangII_Communications_Module</li>
+    </appliedOnFixedBodyParts>
+  </RecipeDef>
+  <ThingDef ParentName="BodyPartDroidBase">
+    <defName>SW_Droid_InterfaceSocket</defName>
+    <label>Interface Socket</label>
+    <descriptionHyperlinks>
+      <RecipeDef>SW_Install_InterfaceSocket</RecipeDef>
+    </descriptionHyperlinks>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallDroidPartNaturalBase">
+    <defName>SW_Install_InterfaceSocket</defName>
+    <label>install Interface Socket</label>
+    <descriptionHyperlinks>
+      <ThingDef>SW_Droid_InterfaceSocket</ThingDef>
+    </descriptionHyperlinks>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SW_Droid_InterfaceSocket</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SW_Droid_InterfaceSocket</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>SW_Droid_InterfaceSocket</li>
+    </appliedOnFixedBodyParts>
+  </RecipeDef>
+  <ThingDef ParentName="BodyPartDroidBase">
+    <defName>SW_Droid_Scomp_Link_Port</defName>
+    <label>Computer Scomp Link</label>
+    <descriptionHyperlinks>
+      <RecipeDef>SW_Install_Scomp_Link_Port</RecipeDef>
+    </descriptionHyperlinks>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallDroidPartNaturalBase">
+    <defName>SW_Install_Scomp_Link_Port</defName>
+    <label>install Computer Scomp Link</label>
+    <descriptionHyperlinks>
+      <ThingDef>SW_Droid_Scomp_Link_Port</ThingDef>
+    </descriptionHyperlinks>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SW_Droid_Scomp_Link_Port</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SW_Droid_Scomp_Link_Port</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>SW_Droid_Scomp_Link_Port</li>
+    </appliedOnFixedBodyParts>
+  </RecipeDef>
+  <ThingDef ParentName="BodyPartDroidBase">
+    <defName>SW_Droid_Power_PlugIn_Socket</defName>
+    <label>Power Plug-in Socket</label>
+    <descriptionHyperlinks>
+      <RecipeDef>SW_Install_Power_PlugIn_Socket</RecipeDef>
+    </descriptionHyperlinks>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallDroidPartNaturalBase">
+    <defName>SW_Install_Power_PlugIn_Socket</defName>
+    <label>install Power Plug-in Socket</label>
+    <descriptionHyperlinks>
+      <ThingDef>SW_Droid_Power_PlugIn_Socket</ThingDef>
+    </descriptionHyperlinks>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SW_Droid_Power_PlugIn_Socket</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SW_Droid_Power_PlugIn_Socket</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>SW_Droid_Power_PlugIn_Socket</li>
+    </appliedOnFixedBodyParts>
+  </RecipeDef>
+  <!--Blood-->
+  <ThingDef ParentName="BodyPartDroidBase">
+    <defName>SW_Droid_Heat_Exaust</defName>
+    <label>Heat Exaust</label>
+    <descriptionHyperlinks>
+      <RecipeDef>SW_Install_Heat_Exaust</RecipeDef>
+    </descriptionHyperlinks>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallDroidPartNaturalBase">
+    <defName>SW_Install_Heat_Exaust</defName>
+    <label>install Heat Exaust</label>
+    <descriptionHyperlinks>
+      <ThingDef>SW_Droid_Heat_Exaust</ThingDef>
+    </descriptionHyperlinks>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SW_Droid_Heat_Exaust</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SW_Droid_Heat_Exaust</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>SW_Droid_Heat_Exaust</li>
+    </appliedOnFixedBodyParts>
+  </RecipeDef>
+  <ThingDef ParentName="BodyPartDroidBase">
+    <defName>SW_Droid_Power_Cell</defName>
+    <label>Power Cell</label>
+    <descriptionHyperlinks>
+      <RecipeDef>SW_Install_Power_Cell</RecipeDef>
+    </descriptionHyperlinks>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallDroidPartNaturalBase">
+    <defName>SW_Install_Power_Cell</defName>
+    <label>install Power Cell</label>
+    <descriptionHyperlinks>
+      <ThingDef>SW_Droid_Power_Cell</ThingDef>
+    </descriptionHyperlinks>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SW_Droid_Power_Cell</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SW_Droid_Power_Cell</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>SW_Droid_Power_Cell</li>
+      <li>SW_Droid_R5_Power_Cell</li>
+    </appliedOnFixedBodyParts>
+  </RecipeDef>
+  <ThingDef ParentName="BodyPartDroidBase">
+    <defName>SW_Droid_Fusion_Generator</defName>
+    <label>Fusion Generator</label>
+    <descriptionHyperlinks>
+      <RecipeDef>SW_Install_Fusion_Generator</RecipeDef>
+    </descriptionHyperlinks>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallDroidPartNaturalBase">
+    <defName>SW_Install_Fusion_Generator</defName>
+    <label>install Fusion Generator</label>
+    <descriptionHyperlinks>
+      <ThingDef>SW_Droid_Fusion_Generator</ThingDef>
+    </descriptionHyperlinks>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SW_Droid_Fusion_Generator</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SW_Droid_Fusion_Generator</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>SW_Droid_Fusion_Generator</li>
+    </appliedOnFixedBodyParts>
+  </RecipeDef>
+  <ThingDef ParentName="BodyPartDroidBase">
+    <defName>SW_Droid_Fluid_Reprocessor</defName>
+    <label>Fluid Reprocessor</label>
+    <descriptionHyperlinks>
+      <RecipeDef>SW_Install_Fluid_Reprocessor</RecipeDef>
+    </descriptionHyperlinks>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallDroidPartNaturalBase">
+    <defName>SW_Install_Fluid_Reprocessor</defName>
+    <label>install Fluid Reprocessor</label>
+    <descriptionHyperlinks>
+      <ThingDef>SW_Droid_Fluid_Reprocessor</ThingDef>
+    </descriptionHyperlinks>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SW_Droid_Fluid_Reprocessor</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SW_Droid_Fluid_Reprocessor</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>SW_Droid_Fluid_Reprocessor</li>
+      <li>SW_Droid_R5_Fluid_Reprocessor</li>
+    </appliedOnFixedBodyParts>
+  </RecipeDef>
+  <!--Limbs-->
+  <ThingDef ParentName="BodyPartDroidBase">
+    <defName>SW_Droid_Leg</defName>
+    <label>Droid Leg</label>
+    <descriptionHyperlinks>
+      <RecipeDef>SW_Install_Leg</RecipeDef>
+    </descriptionHyperlinks>
+    <statBases>
+      <MarketValue>280</MarketValue>
+    </statBases>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallDroidPartNaturalBase">
+    <defName>SW_Install_Leg</defName>
+    <label>install Droid Leg</label>
+    <descriptionHyperlinks>
+      <ThingDef>SW_Droid_Leg</ThingDef>
+    </descriptionHyperlinks>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SW_Droid_Leg</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SW_Droid_Leg</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>SW_Droid_Leg</li>
+    </appliedOnFixedBodyParts>
+  </RecipeDef>
+  <ThingDef ParentName="BodyPartDroidBase">
+    <defName>SW_Droid_Motorized_Tread</defName>
+    <label>Motorized Tread</label>
+    <descriptionHyperlinks>
+      <RecipeDef>SW_Install_Motorized_Tread</RecipeDef>
+    </descriptionHyperlinks>
+    <statBases>
+      <MarketValue>280</MarketValue>
+    </statBases>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallDroidPartNaturalBase">
+    <defName>SW_Install_Motorized_Tread</defName>
+    <label>install Motorized Tread</label>
+    <descriptionHyperlinks>
+      <ThingDef>SW_Droid_Motorized_Tread</ThingDef>
+    </descriptionHyperlinks>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SW_Droid_Motorized_Tread</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SW_Droid_Motorized_Tread</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>SW_Droid_Motorized_Tread</li>
+      <li>SW_Droid_R5_Motorized_Tread</li>
+    </appliedOnFixedBodyParts>
+  </RecipeDef>
+  <ThingDef ParentName="BodyPartDroidBase">
+    <defName>SW_Droid_Arm</defName>
+    <label>Droid Arm</label>
+    <descriptionHyperlinks>
+      <RecipeDef>SW_Install_Arm</RecipeDef>
+    </descriptionHyperlinks>
+    <statBases>
+      <MarketValue>280</MarketValue>
+    </statBases>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallDroidPartArtificialBase">
+    <defName>SW_Install_Arm</defName>
+    <label>install Droid Arm</label>
+    <descriptionHyperlinks>
+      <ThingDef>SW_Droid_Arm</ThingDef>
+    </descriptionHyperlinks>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SW_Droid_Arm</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SW_Droid_Arm</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>SW_Droid_Arm</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>SW_Droid_Arm</addsHediff>
+  </RecipeDef>
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>SW_Droid_Arm</defName>
+    <label>Droid Arm</label>
+    <labelNoun>a Droid Arm</labelNoun>
+    <description>An installed Droid Arm.</description>
+    <descriptionHyperlinks>
+      <ThingDef>SW_Droid_Arm</ThingDef>
+    </descriptionHyperlinks>
+    <stages>
+      <li>
+        <becomeVisible>false</becomeVisible>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+          <li>
+            <label>fist</label>
+            <capacities>
+              <li>Blunt</li>
+            </capacities>
+            <power>8.2</power>
+            <cooldownTime>2</cooldownTime>
+            <soundMeleeHit>MeleeHit_BionicPunch</soundMeleeHit>
+            <soundMeleeMiss>MeleeMiss_BionicPunch</soundMeleeMiss>
+          </li>
+        </tools>
+      </li>
+    </comps>
+    <spawnThingOnRemoved>SW_Droid_Arm</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.00</partEfficiency>
+    </addedPartProps>
+  </HediffDef>
+  <ThingDef ParentName="BodyPartDroidBase">
+    <defName>SW_Droid_Rotator_Base</defName>
+    <label>Rotator Base</label>
+    <descriptionHyperlinks>
+      <RecipeDef>SW_Install_Rotator_Base</RecipeDef>
+    </descriptionHyperlinks>
+    <statBases>
+      <MarketValue>280</MarketValue>
+    </statBases>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallDroidPartNaturalBase">
+    <defName>SW_Install_Rotator_Base</defName>
+    <label>install Rotator Base</label>
+    <descriptionHyperlinks>
+      <ThingDef>SW_Droid_Rotator_Base</ThingDef>
+    </descriptionHyperlinks>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SW_Droid_Rotator_Base</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SW_Droid_Rotator_Base</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>SW_Droid_Rotator_Base</li>
+    </appliedOnFixedBodyParts>
+  </RecipeDef>
+  <ThingDef ParentName="BodyPartDroidBase">
+    <defName>SW_Droid_Repulsorlift_DriveUnit</defName>
+    <label>Repulsorlift Drive Unit</label>
+    <descriptionHyperlinks>
+      <RecipeDef>SW_Install_Repulsorlift_DriveUnit</RecipeDef>
+    </descriptionHyperlinks>
+    <statBases>
+      <MarketValue>280</MarketValue>
+    </statBases>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallDroidPartNaturalBase">
+    <defName>SW_Install_Repulsorlift_DriveUnit</defName>
+    <label>install Repulsorlift Drive Unit</label>
+    <descriptionHyperlinks>
+      <ThingDef>SW_Droid_Repulsorlift_DriveUnit</ThingDef>
+    </descriptionHyperlinks>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SW_Droid_Repulsorlift_DriveUnit</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SW_Droid_Repulsorlift_DriveUnit</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>SW_Droid_Repulsorlift_DriveUnit</li>
+    </appliedOnFixedBodyParts>
+  </RecipeDef>
+  <!--====Artificial====-->
+  <!--Consciousness-->
+  <ThingDef ParentName="BodyPartDroidBase">
+    <defName>SW_Droid_IntellexV</defName>
+    <label>Intellex V</label>
+    <descriptionHyperlinks>
+      <RecipeDef>SW_Install_IntellexV</RecipeDef>
+    </descriptionHyperlinks>
+    <statBases>
+      <MarketValue>320</MarketValue>
+    </statBases>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallDroidPartArtificialBase">
+    <defName>SW_Install_IntellexV</defName>
+    <label>install Intellex V</label>
+    <descriptionHyperlinks>
+      <ThingDef>SW_Droid_IntellexV</ThingDef>
+    </descriptionHyperlinks>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SW_Droid_IntellexV</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SW_Droid_IntellexV</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>SW_Droid_IntellexIV</li>
+    </appliedOnFixedBodyParts>
+  </RecipeDef>
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>SW_Droid_IntellexV</defName>
+    <label>Intellex V</label>
+    <labelNoun>a Intellex V</labelNoun>
+    <description>An installed Intellex V.</description>
+    <descriptionHyperlinks>
+      <ThingDef>SW_Droid_IntellexV</ThingDef>
+    </descriptionHyperlinks>
+    <spawnThingOnRemoved>SW_Droid_IntellexV</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.00</partEfficiency>
+    </addedPartProps>
+    <stages>
+      <li>
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>+0.08</offset>
+          </li>
+        </capMods>
+        <statOffsets>
+          <GeneralLaborSpeed>0.2</GeneralLaborSpeed>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+  <!--Extra-->
+  <ThingDef ParentName="BodyPartDroidBase">
+    <defName>SW_Droid_TranLangIII_Communications_Module</defName>
+    <label>TranLang III Communications Module</label>
+    <descriptionHyperlinks>
+      <RecipeDef>SW_Install_TranLangIII_Communications_Module</RecipeDef>
+    </descriptionHyperlinks>
+    <statBases>
+      <MarketValue>320</MarketValue>
+    </statBases>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallDroidPartArtificialBase">
+    <defName>SW_Install_TranLangIII_Communications_Module</defName>
+    <label>install TranLang III Communications Module</label>
+    <descriptionHyperlinks>
+      <ThingDef>SW_Droid_TranLangIII_Communications_Module</ThingDef>
+    </descriptionHyperlinks>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SW_Droid_TranLangIII_Communications_Module</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SW_Droid_TranLangIII_Communications_Module</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>SW_Droid_TranLangII_Communications_Module</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>SW_Droid_TranLangIII_Communications_Module</addsHediff>
+  </RecipeDef>
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>SW_Droid_TranLangIII_Communications_Module</defName>
+    <label>TranLang III Communications Module</label>
+    <labelNoun>a TranLang III Communications Module</labelNoun>
+    <description>An installed TranLang III Communications Module.</description>
+    <descriptionHyperlinks>
+      <ThingDef>SW_Droid_TranLangIII_Communications_Module</ThingDef>
+    </descriptionHyperlinks>
+    <spawnThingOnRemoved>SW_Droid_TranLangIII_Communications_Module</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.00</partEfficiency>
+    </addedPartProps>
+    <stages>
+      <li>
+        <capMods>
+          <li>
+            <capacity>Talking</capacity>
+            <offset>+0.08</offset>
+          </li>
+        </capMods>
+        <statOffsets>
+          <NegotiationAbility>0.2</NegotiationAbility>
+          <TradePriceImprovement>0.2</TradePriceImprovement>
+          <SocialImpact>0.2</SocialImpact>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+</Defs>

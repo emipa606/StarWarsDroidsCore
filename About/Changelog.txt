@@ -1,5 +1,8 @@
 # Changelog for StarWarsDroidsCore
 
+1.4.1 - Fixed gene-restrictions to not affect visuals, thanks to Razar on the HAR-discord
+
+
 1.3.1 - Updated for 1.3. Power-use removed since the [O21] Toolbox no longer has support for it. May be added again if I can find a fitting framework
 
 

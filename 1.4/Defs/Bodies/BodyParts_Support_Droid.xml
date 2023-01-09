@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--Head-->
+  <BodyPartDef>
+    <defName>SW_Medical_Head</defName>
+    <label>Surgical Droid Head</label>
+    <hitPoints>25</hitPoints>
+    <solid>true</solid>
+    <skinCovered>true</skinCovered>
+    <canSuggestAmputation>false</canSuggestAmputation>
+    <bleedRate>0</bleedRate>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>SW_MedicalAssistant_Head</defName>
+    <label>Medical Assistant Head</label>
+    <hitPoints>25</hitPoints>
+    <solid>true</solid>
+    <skinCovered>true</skinCovered>
+    <canSuggestAmputation>false</canSuggestAmputation>
+    <bleedRate>0</bleedRate>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>SW_Viper_Head</defName>
+    <label>Viper Probe Droid Head</label>
+    <hitPoints>25</hitPoints>
+    <solid>true</solid>
+    <skinCovered>true</skinCovered>
+    <canSuggestAmputation>false</canSuggestAmputation>
+    <bleedRate>0</bleedRate>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+  </BodyPartDef>
+  <!--Internal Parts-->
+  <BodyPartDef>
+    <defName>SW_Droid_Medical_Diagnostic_Computer</defName>
+    <label>Medical Diagnostic Computer</label>
+    <hitPoints>10</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <delicate>true</delicate>
+    <skinCovered>false</skinCovered>
+    <tags>
+      <li>ConsciousnessSource</li>
+    </tags>
+    <canSuggestAmputation>false</canSuggestAmputation>
+    <bleedRate>0</bleedRate>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>SW_Droid_Analytical_Computer</defName>
+    <label>Analytical Computer</label>
+    <hitPoints>10</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <delicate>true</delicate>
+    <skinCovered>false</skinCovered>
+    <tags>
+      <li>ConsciousnessSource</li>
+    </tags>
+    <canSuggestAmputation>false</canSuggestAmputation>
+    <bleedRate>0</bleedRate>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>SW_Droid_InterfaceSocket</defName>
+    <label>Interface Socket</label>
+    <hitPoints>10</hitPoints>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>SW_Droid_Analysis_Processors</defName>
+    <label>Analysis Processors</label>
+    <hitPoints>10</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <delicate>true</delicate>
+    <skinCovered>false</skinCovered>
+    <tags>
+      <li>ConsciousnessSource</li>
+    </tags>
+    <canSuggestAmputation>false</canSuggestAmputation>
+    <bleedRate>0</bleedRate>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>SW_Droid_Armored_Systems_Housig</defName>
+    <label>Armored Systems Housig</label>
+    <hitPoints>10</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <delicate>true</delicate>
+    <skinCovered>false</skinCovered>
+    <tags>
+      <li>ConsciousnessSource</li>
+    </tags>
+    <canSuggestAmputation>false</canSuggestAmputation>
+    <bleedRate>0</bleedRate>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>SW_Droid_Skill_Matrix</defName>
+    <label>Skill Matrix</label>
+    <hitPoints>10</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <delicate>true</delicate>
+    <skinCovered>false</skinCovered>
+    <tags>
+      <li>ConsciousnessSource</li>
+    </tags>
+    <canSuggestAmputation>false</canSuggestAmputation>
+    <bleedRate>0</bleedRate>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>SW_Droid_Medical_Diagnostic_Sensors</defName>
+    <label>Medical Diagnostic Sensors</label>
+    <hitPoints>10</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <delicate>true</delicate>
+    <skinCovered>false</skinCovered>
+    <socketed>true</socketed>
+    <tags>
+      <li>SightSource</li>
+    </tags>
+    <hitChanceFactors>
+      <li>
+        <key>Blunt</key>
+        <value>0</value>
+      </li>
+    </hitChanceFactors>
+    <bleedRate>0</bleedRate>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>SW_Droid_Scomp_Link_Port</defName>
+    <label>Computer Scomp Link</label>
+    <hitPoints>20</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <canSuggestAmputation>false</canSuggestAmputation>
+    <bleedRate>0</bleedRate>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>SW_Droid_Power_PlugIn_Socket</defName>
+    <label>Power Plug-in Socket</label>
+    <hitPoints>20</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <canSuggestAmputation>false</canSuggestAmputation>
+    <bleedRate>0</bleedRate>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>SW_Droid_Acoustic_Signaler</defName>
+    <label>Acoustic Signaler</label>
+    <hitPoints>20</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <tags>
+      <li>EatingSource</li>
+      <li>TalkingSource</li>
+    </tags>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>SW_Droid_Broadcast_Antennae</defName>
+    <label>Broadcast Antennae</label>
+    <hitPoints>20</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <tags>
+      <li>EatingSource</li>
+      <li>TalkingSource</li>
+    </tags>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>SW_Droid_Atmospheric_Sampler</defName>
+    <label>Atmospheric Sampler</label>
+    <hitPoints>12</hitPoints>
+    <skinCovered>true</skinCovered>
+    <tags>
+      <li>SightSource</li>
+    </tags>
+    <hitChanceFactors>
+      <li>
+        <key>Blunt</key>
+        <value>0</value>
+      </li>
+    </hitChanceFactors>
+    <bleedRate>0</bleedRate>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>SW_Droid_Planetary_Sensor</defName>
+    <label>Planetary Sensor</label>
+    <hitPoints>12</hitPoints>
+    <skinCovered>true</skinCovered>
+    <tags>
+      <li>SightSource</li>
+    </tags>
+    <hitChanceFactors>
+      <li>
+        <key>Blunt</key>
+        <value>0</value>
+      </li>
+    </hitChanceFactors>
+    <bleedRate>0</bleedRate>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>SW_Droid_Movement_Sensor</defName>
+    <label>Movement Sensor</label>
+    <hitPoints>12</hitPoints>
+    <skinCovered>true</skinCovered>
+    <tags>
+      <li>SightSource</li>
+    </tags>
+    <hitChanceFactors>
+      <li>
+        <key>Blunt</key>
+        <value>0</value>
+      </li>
+    </hitChanceFactors>
+    <bleedRate>0</bleedRate>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+  </BodyPartDef>
+  <!--"Blood"-->
+  <BodyPartDef>
+    <defName>SW_Droid_Fusion_Generator</defName>
+    <label>Power Cell</label>
+    <hitPoints>15</hitPoints>
+    <bleedRate>0</bleedRate>
+    <skinCovered>false</skinCovered>
+    <tags>
+      <li>BloodPumpingSource</li>
+    </tags>
+    <canSuggestAmputation>false</canSuggestAmputation>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+  </BodyPartDef>
+  <!--Legs + Arms-->
+  <BodyPartDef>
+    <defName>SW_Droid_Rotator_Base</defName>
+    <label>Rotator Base</label>
+    <hitPoints>30</hitPoints>
+    <skinCovered>true</skinCovered>
+    <tags>
+      <li>MovingLimbCore</li>
+    </tags>
+    <bleedRate>0</bleedRate>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>SW_Droid_Repulsorlift_DriveUnit</defName>
+    <label>Repulsorlift Drive Unit</label>
+    <hitPoints>30</hitPoints>
+    <skinCovered>true</skinCovered>
+    <tags>
+      <li>MovingLimbCore</li>
+    </tags>
+    <bleedRate>0</bleedRate>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+  </BodyPartDef>
+</Defs>

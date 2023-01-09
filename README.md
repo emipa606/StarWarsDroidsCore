@@ -5,6 +5,8 @@
 Update of FantasyFans mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=2210240739
 
+- In 1.3 the energy-need for droids is removed since that function is no longer available in the [O21] Toolbox
+
 ![Image](https://i.imgur.com/pufA0kM.png)
 
 	
@@ -37,3 +39,5 @@ If you find things unbalanced, please make suggestions for improvement.
 
 
 
+
+https://steamcommunity.com/sharedfiles/filedetails/changelog/2390795789]Last updated 2023-01-09

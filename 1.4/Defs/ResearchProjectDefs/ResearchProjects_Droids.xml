@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ResearchProjectDef>
+    <defName>R2_Series</defName>
+    <label>R2-Series</label>
+    <description>Create R2-Series Astromech Droids.</description>
+    <baseCost>1500</baseCost>
+    <techLevel>Spacer</techLevel>
+    <tab>WSDroidTab</tab>
+    <researchViewX>0</researchViewX>
+    <researchViewY>0</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>R3_Series</defName>
+    <label>R3-Series</label>
+    <description>Create R3-Series Astromech Droids.</description>
+    <baseCost>1500</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>R2_Series</li>
+    </prerequisites>
+    <tab>WSDroidTab</tab>
+    <researchViewX>1</researchViewX>
+    <researchViewY>0</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>R4_Series</defName>
+    <label>R4-Series</label>
+    <description>Create R4-Series Agromechs Droids.</description>
+    <baseCost>1500</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>R3_Series</li>
+    </prerequisites>
+    <tab>WSDroidTab</tab>
+    <researchViewX>2</researchViewX>
+    <researchViewY>0</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>R5_Series</defName>
+    <label>R5-Series</label>
+    <description>Create R5-Series Astromech Droids.</description>
+    <baseCost>1500</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>R4_Series</li>
+    </prerequisites>
+    <tab>WSDroidTab</tab>
+    <researchViewX>3</researchViewX>
+    <researchViewY>0</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>R6_Series</defName>
+    <label>R6-Series</label>
+    <description>Create R6-Series Astromech Droids.</description>
+    <baseCost>1500</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>R5_Series</li>
+    </prerequisites>
+    <tab>WSDroidTab</tab>
+    <researchViewX>4</researchViewX>
+    <researchViewY>0</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>C1_Series</defName>
+    <label>C1-Series</label>
+    <description>Create C1-Series Astromech Droids.</description>
+    <baseCost>1500</baseCost>
+    <techLevel>Spacer</techLevel>
+    <tab>WSDroidTab</tab>
+    <researchViewX>0</researchViewX>
+    <researchViewY>0.75</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>BB_Series</defName>
+    <label>BB-Series</label>
+    <description>Create BB-Series Astromech Droids.</description>
+    <baseCost>1500</baseCost>
+    <techLevel>Spacer</techLevel>
+    <tab>WSDroidTab</tab>
+    <researchViewX>0</researchViewX>
+    <researchViewY>1.5</researchViewY>
+  </ResearchProjectDef>
+</Defs>
